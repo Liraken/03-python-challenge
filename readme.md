@@ -68,7 +68,7 @@ Always commit your work and back it up with pushes to GitHub or GitLab. You don'
 
 -------------------------------------------------------
 ### References
-	* For this I refrenced two different Repositories one from fellow student Ashelyn Allred and one from a past student found on github
-		* https://github.com/AshelynAllred/python-challenge
-		* https://github.com/jzhao0626/HW03_Python_Challenge/tree/main
-		* As well as refrencing some from class activities
+* For this I refrenced two different Repositories one from fellow student Ashelyn Allred and one from jzhao0626
+	* https://github.com/AshelynAllred/python-challenge
+	* https://github.com/jzhao0626/HW03_Python_Challenge/tree/main
+	* As well as refrencing some from class activities

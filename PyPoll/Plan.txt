@@ -1,0 +1,81 @@
+What I'm looking to output
+Total Votes
+Candidate name
+% of total votes
+Total votes per candidate
+winner
+
+------------------------------------------
+
+### Import modules
+import os, csv
+
+# Reading through the CSV data
+csvpath = os.path.join('Resources', 'election_data.csv')
+with open(csv_path) as csv_file:
+
+    csvreader = csv.reader(csv_file)
+    # remove header from csv
+    next(csvreader)
+
+    #both prints to console and writes to file - Referenced from Ashelyn Allred
+    def write_and_print(output_str, file):
+    print(output_str)
+    file.write(output_str + "\n")
+    return
+
+    create variables
+	count
+	cand = {}
+	winner = 0
+
+    Start for loop
+	
+	check if current row is in the cand dictionary
+	if it is not add it to the dictionary with a value of 0
+
+	incriment cand count	
+
+	incriment total count
+	
+with open(analysis_path, "w") as a_file:
+	make divider variable for convinence / consistancy
+	
+	use write and print function to write and print the Election Results header and the Total Votes
+
+	Use for loop to write and print Each canditate as well as their data saved in the cand dictionary 
+
+	if statement to find winner
+
+    write and print winner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------
+Refrences 
+-Ashelyn Allred
+#both prints to console and writes to file
+def write_and_print(output_str, file):
+    print(output_str)
+    file.write(output_str + "\n")
+    return
+
+with open(analysis_path, "w") as a_file:
+    write_and_print('Financial Analysis\n----------------------------', a_file)
+    write_and_print(f'Total Months: {row_ct}\nTotal: ${total}\nAverage Change: ${pl_avg:.2f}', a_file)
+    write_and_print(f'Greatest Increase in Profits: {pl_max[0]} (${pl_max[1]})', a_file)
+    write_and_print(f'Greatest Decrease in Profits: {pl_min[0]} (${pl_min[1]})', a_file)

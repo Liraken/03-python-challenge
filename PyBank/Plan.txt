@@ -1,0 +1,76 @@
+What Im looking to output
+Total Months in data set
+Sum of Dollar amounts
+Average change (first value 
+Greatest increase
+Greatest Decrease
+
+-------------------------------------
+
+import os, csv
+
+define path for output and for input 
+	csv_path 
+	analysis_path
+
+def write_and_print(output_str, file):
+    print(output_str)
+    file.write(output_str + "\n")
+    return
+
+
+SKIP HEADER 
+csv_header = next(csvreader)
+
+define variables
+	months -- row_ct
+	total
+	change
+	change_all
+	max
+	min
+	
+	For row in csvreader:
+	
+		incriment months
+
+		update total
+
+		set last variable for the first row
+			if months == 1:
+				last = int(row[1])
+	
+		find change by subtracting last from current
+		and add it to change_all to record overall change
+
+
+		Find max - max_month as well as min - min_month
+			if change > max:
+       		     	    max = change
+       		     	    max_month = row[0]
+
+        		elif change < min:
+           		    min = change
+            	  	    min_month = row[0]
+	
+		Find change
+
+
+  Find average change
+  change = round(change_all / (months - 1), 2)
+
+ print and write
+--------------------------------------------------
+Refrences 
+-Ashelyn Allred
+#both prints to console and writes to file
+def write_and_print(output_str, file):
+    print(output_str)
+    file.write(output_str + "\n")
+    return
+
+with open(analysis_path, "w") as a_file:
+    write_and_print('Financial Analysis\n----------------------------', a_file)
+    write_and_print(f'Total Months: {row_ct}\nTotal: ${total}\nAverage Change: ${pl_avg:.2f}', a_file)
+    write_and_print(f'Greatest Increase in Profits: {pl_max[0]} (${pl_max[1]})', a_file)
+    write_and_print(f'Greatest Decrease in Profits: {pl_min[0]} (${pl_min[1]})', a_file)
